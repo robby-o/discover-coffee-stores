@@ -48,7 +48,7 @@ export default function Home(props = null) {
       if (latLong) {
         try {
           const response = await fetch(
-            `/api/getCoffeeStoreByLocation?latLong=${latLong}&limit=10`
+            `/api/getCoffeeStoreByLocation?latLong=${latLong}&limit=4`
           )
 
           const coffeeStores = await response.json()
