@@ -58,7 +58,7 @@ const CoffeeStore = (initialProps = null) => {
   } = useContext(StoreContext)
 
   const handleCreateCoffeeStore = async (coffeeStore) => {
-    if (coffeeStore) {
+    if (coffeeStore && coffeeStore.length > 0) {
       try {
         const { id, name, voting, imgUrl, address } = coffeeStore
         const response = await fetch('/api/createCoffeeStore', {
