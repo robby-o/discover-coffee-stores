@@ -45,7 +45,7 @@ export async function getStaticPaths() {
   }
 }
 
-const CoffeeStore = (initialProps) => {
+const CoffeeStore = (initialProps = null) => {
   const { useEffect, useState, useContext } = React
   const router = useRouter()
 

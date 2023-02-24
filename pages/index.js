@@ -33,7 +33,7 @@ export async function getStaticProps(context) {
   }
 }
 
-export default function Home(props) {
+export default function Home(props = null) {
   const { handleTrackLocation, locationErrorMsg, isFindingLocation } =
     useTrackLocation()
 
