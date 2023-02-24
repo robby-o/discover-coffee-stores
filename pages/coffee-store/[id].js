@@ -146,7 +146,7 @@ const CoffeeStore = (initialProps = null) => {
     return <div>Something went wrong retrieving coffee store page</div>
   }
 
-  if (name !== undefined && name !== null) {
+  if (coffeeStore && coffeeStore.name) {
     return (
       <div className={styles.layout}>
         <Head>
