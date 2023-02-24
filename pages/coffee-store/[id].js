@@ -100,7 +100,7 @@ const CoffeeStore = (initialProps = null) => {
     }
   }, [id, initialProps.coffeeStore, coffeeStores])
 
-  const { name = '', address = '', imgUrl = '' } = coffeeStore
+  const { name = 'Coffee Shop', address = '', imgUrl = '' } = coffeeStore
   const [votingCount, setVotingCount] = useState(0)
 
   const { data, error } = useSWR(
