@@ -107,7 +107,7 @@ export default function Home(props = null) {
           />
         </div>
 
-        {coffeeStores.length > 0 && (
+        {coffeeStores && coffeeStores.length > 0 && (
           <div className={styles.sectionWrapper}>
             <h2 className={styles.heading2}>Stores near me</h2>
             <div className={styles.cardLayout}>
@@ -130,7 +130,7 @@ export default function Home(props = null) {
         )}
 
         <div className={styles.sectionWrapper}>
-          {props.coffeeStores.length > 0 && (
+          {props && props.coffeeStores.length > 0 && (
             <Fragment>
               <h2 className={styles.heading2}>Toronto stores</h2>
               <div className={styles.cardLayout}>
