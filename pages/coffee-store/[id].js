@@ -58,27 +58,25 @@ const CoffeeStore = (initialProps = null) => {
   } = useContext(StoreContext)
 
   const handleCreateCoffeeStore = async (coffeeStore) => {
-    if (coffeeStore && coffeeStore.length > 0) {
-      try {
-        const { id, name, voting, imgUrl, address } = coffeeStore
-        const response = await fetch('/api/createCoffeeStore', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            id,
-            name,
-            voting,
-            imgUrl,
-            address: address || '',
-          }),
-        })
+    try {
+      const { id, name, voting, imgUrl, address } = coffeeStore
+      const response = await fetch('/api/createCoffeeStore', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id,
+          name,
+          voting,
+          imgUrl,
+          address: address || '',
+        }),
+      })
 
-        const dbCoffeeStore = await response.json()
-      } catch (err) {
-        console.error('Error creating coffee store', err)
-      }
+      const dbCoffeeStore = await response.json()
+    } catch (err) {
+      console.error('Error creating coffee store', err)
     }
   }
 
