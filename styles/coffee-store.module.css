@@ -49,6 +49,7 @@
   border-radius: 0.75rem /* 12px */;
   max-width: 100%;
   height: auto;
+  width: auto;
   vertical-align: middle;
   border-style: none;
 }
